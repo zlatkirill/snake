@@ -12,7 +12,38 @@ namespace snake
         public int y;
         public char sym;
 
-      
+        public Point(Point p)
+        {
+            x = p.x;
+            y = p.y;
+            sym = p.sym;
+        }
+
+        public void Move(int offset, Directions direction)
+        {
+            if (direction == Directions.LEFT)
+            {
+                x = x-offset;
+            }
+            if (direction == Directions.RIGHT)
+            {
+                x =x +offset;
+            }
+            if (direction == Directions.UP)
+            {
+                y = y-offset;
+            }
+            if (direction == Directions.DOWN)
+            {
+                y =y +offset;
+            }
+
+        }         
+
+
+
+
+
         public Point(int _x, int _y, char _sym)
         {
             x = _x;
